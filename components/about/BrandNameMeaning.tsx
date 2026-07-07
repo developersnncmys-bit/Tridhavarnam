@@ -53,10 +53,10 @@ const verses: Record<Script, { label: string; subLabel: string; lines: string[] 
   },
 };
 
-const scriptOrder: Script[] = ['sanskrit', 'telugu', 'kannada'];
+const scriptOrder: Script[] = ['kannada', 'telugu', 'sanskrit'];
 
 export default function BrandNameMeaning() {
-  const [active, setActive] = useState<Script>('sanskrit');
+  const [active, setActive] = useState<Script>('kannada');
   const current = verses[active];
 
   return (
