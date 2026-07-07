@@ -12,13 +12,22 @@ export const metadata: Metadata = {
     'Thridha Varnam is a premium saree brand inspired by the beauty, grace, and cultural richness of Indian womanhood. Tradition in Every Color.',
 };
 
-const numbers: { stat: string; label: string }[] = [
-  { stat: '40+', label: 'Master weavers' },
-  { stat: '9', label: 'Weaving traditions' },
-  { stat: 'Pan-India', label: 'States we work in' },
-  { stat: '1,000+', label: 'Sarees delivered' },
-  { stat: '6', label: 'Countries shipped to' },
-  { stat: '2026', label: 'Established' },
+// Placeholder founder copy — swap with the real bios + headshots when
+// the client sends them. Keep the shape the same and the founders map
+// (rendered below Vision & Mission) will pick up the new values.
+const founders: { name: string; role: string; initials: string; bio: string }[] = [
+  {
+    name: 'Founder Name',
+    role: 'Founder & Creative Director',
+    initials: 'FN',
+    bio: "A lifelong student of India's handloom traditions, the founder set up Thridha Varnam to bring the craft of master weaver families to a new generation. She personally curates every collection and works alongside artisans in Kanchipuram, Varanasi and Mysuru to ensure each drape stays faithful to its lineage.",
+  },
+  {
+    name: 'Co-Founder Name',
+    role: 'Co-Founder & Head of Operations',
+    initials: 'CN',
+    bio: "The co-founder leads sourcing, quality and the atelier's end-to-end operations. A textile engineer by training, he built the house's five-step inspection process and the direct-to-weaver royalty model that shares proceeds with the families whose work carries the brand.",
+  },
 ];
 
 const weaves: { name: string; place: string; era: string; image: string }[] = [
@@ -35,12 +44,12 @@ const weaves: { name: string; place: string; era: string; image: string }[] = [
 
 const values: { title: string; body: string }[] = [
   {
-    title: 'Hand-woven, never printed',
-    body: 'Every Thridha Varnam saree is woven on a pit loom or jacquard, not screen-printed. We do not stock power-loom replicas, even when the visual is identical.',
+    title: 'Craft comes first',
+    body: 'From heritage handloom weaves like Kanjeevaram, Banarasi, Mysore Silk, Mangalagiri, Pochampally, Gadwal and Patola to our contemporary Fancy Sarees and Mixed Pattu fusion drapes, every piece is chosen for the authenticity of its craft. Tradition in every color — never a power-loom replica, never a mass-produced imitation.',
   },
   {
-    title: 'Tested zari, declared weight',
-    body: 'All our gold and silver zari is laboratory-tested. The exact thread weight is printed on every product page — so you know what you are paying for.',
+    title: 'Honest zari, declared weight',
+    body: 'The zari grade and the exact thread weight of every saree are printed on the product page — so you know what you are paying for before it arrives at your door.',
   },
   {
     title: 'Fair pay to the weaver',
@@ -73,13 +82,13 @@ const timeline: { year: string; title: string; body: string }[] = [
  *   2. Brand Name Meaning (Sanskrit / Telugu / Kannada verse + meaning)
  *   3. Logo Meaning       (kit page 5, verbatim)
  *   4. Vision & Mission   (kit page 4, verbatim, dark wine panel)
- *   5. By the numbers     (operational stats â€” supporting content)
+ *   5. Meet the founders  (placeholder bios — swap in real copy later)
  *   6. The Eight Weaves   (weave lineage grid)
  *   7. What we promise    (values)
  *   8. Our journey        (timeline)
  *   9. Visit / commission (atelier CTA)
  *
- * Sections 1â€“4 are brand-kit-verbatim. Sections 5â€“9 are our own
+ * Sections 1-4 are brand-kit-verbatim. Sections 5-9 are our own
  * supporting copy. Both use the brand typography rule (Black Mango
  * for headings, Plus Jakarta Sans for body) and the brand palette
  * (ivory / ink / maroon / gold).
@@ -144,27 +153,50 @@ export default function AboutPage() {
       {/* Vision & Mission â€” kit page 4, verbatim, dark wine panel */}
       <VisionMission />
 
-      {/* By the numbers â€” operational supporting content. */}
-      <section className="bg-bone border-y border-maroon/10">
-        <div className="max-w-[1100px] mx-auto px-6 lg:px-10 py-12 lg:py-16">
+      {/* Meet the founders — placeholder copy + initials portrait tiles.
+          Swap the initials <div> for a next/image <Image> once real
+          headshots are supplied; the surrounding card layout stays. */}
+      <section className="bg-ivory border-b border-maroon/10">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-10 py-14 lg:py-20">
           <div className="text-[0.65rem] tracking-[0.45em] uppercase text-maroon font-semibold">
-            By the numbers
+            Leadership
           </div>
-          <h2 className="mt-3 font-display text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] font-medium text-ink leading-[1.1] mb-8 md:mb-10">
-            The house at a glance
+          <h2 className="mt-3 font-display text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] font-medium text-ink leading-[1.1]">
+            Meet the founders
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-            {numbers.map((n) => (
-              <div key={n.label} className="border-l-2 border-maroon pl-3">
-                <div className="text-2xl md:text-3xl font-bold text-ink tabular-nums">
-                  {n.stat}
+          <p className="mt-3 text-sm md:text-base text-ink/70 max-w-3xl leading-[1.75] mb-10 md:mb-12">
+            Thridha Varnam is led by two founders who share a lifelong love
+            for India's handloom traditions and a commitment to the artisan
+            families behind every weave.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {founders.map((f) => (
+              <article
+                key={f.name}
+                className="flex flex-col sm:flex-row gap-5 border border-maroon/15 bg-white p-5 lg:p-6"
+              >
+                <div className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-maroon-deep text-ivory flex items-center justify-center font-display text-2xl sm:text-3xl font-semibold tracking-wide">
+                  {f.initials}
                 </div>
-                <div className="text-xs text-ink/65 mt-0.5 uppercase tracking-wide">
-                  {n.label}
+                <div className="min-w-0">
+                  <div className="text-[0.6rem] tracking-[0.35em] uppercase text-maroon font-semibold">
+                    {f.role}
+                  </div>
+                  <h3 className="mt-1 font-display text-xl md:text-2xl font-medium text-ink leading-tight">
+                    {f.name}
+                  </h3>
+                  <p className="mt-3 text-sm text-ink/75 leading-[1.75]">
+                    {f.bio}
+                  </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
+
+          <p className="mt-8 text-[0.7rem] text-ink/50 italic">
+            Placeholder biographies — final copy and headshots to follow.
+          </p>
         </div>
       </section>
 

@@ -301,14 +301,31 @@ export default function HeritageScroll() {
             </header>
 
             {/* ─── Introduction ─── */}
-            <div className="grid md:grid-cols-[1.15fr_1fr] gap-x-12 gap-y-6 items-end mb-10 md:mb-14">
+            {/* Eyebrow row — pairs the section eyebrow with the
+                "Step inside" shortcut. Editorial pill would fight the
+                cinematic mood, so we match the old bottom CTA style
+                (gold hairline + arrow) and sit it opposite the eyebrow. */}
+            <div className="mb-4 md:mb-6 flex flex-wrap items-center justify-between gap-3">
+              <div
+                data-h-eyebrow
+                className="eyebrow text-[#E0AE6D]/85 text-[0.55rem] tracking-[0.45em]"
+              >
+                An introduction · The house
+              </div>
+              <a
+                href="/home"
+                onClick={leaveStory('/home')}
+                className="group inline-flex items-center gap-2 text-[#F2C99E] hover:text-ivory transition-colors"
+              >
+                <span className="eyebrow text-[0.72rem] md:text-[0.78rem] tracking-[0.32em] font-semibold">
+                  Step inside
+                </span>
+                <span className="text-base leading-none translate-y-[-1px] transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
+            </div>
+
+            <div className="grid md:grid-cols-[1.15fr_1fr] gap-x-12 gap-y-6 items-start mb-10 md:mb-14">
               <div>
-                <div
-                  data-h-eyebrow
-                  className="eyebrow text-[#E0AE6D]/85 text-[0.55rem] tracking-[0.45em] mb-3"
-                >
-                  An introduction · The house
-                </div>
                 <h1 className="text-display text-[6vw] sm:text-[5vw] md:text-[3.2vw] lg:text-[3.4vw] xl:text-[2.8rem] leading-tight tracking-tight text-ivory">
                   <span className="block overflow-hidden pb-[0.2em]">
                     <span data-h-line className="block whitespace-nowrap">
@@ -424,25 +441,15 @@ export default function HeritageScroll() {
               ))}
             </div>
 
-            {/* ─── Footer band ─── */}
+            {/* ─── Footer band — "Step inside" CTA lives at the top of
+                the section now; this band just carries the origin tag. */}
             <div
               data-h-foot
-              className="mt-10 md:mt-14 flex flex-wrap items-center justify-between gap-6 border-t border-ivory/10 pt-7"
+              className="mt-10 md:mt-14 border-t border-ivory/10 pt-7"
             >
               <div className="eyebrow text-[0.55rem] tracking-[0.4em] text-ivory/45">
                 Hand-woven in India · Shipped worldwide
               </div>
-              <a
-                href="/home"
-                onClick={leaveStory('/home')}
-                className="group inline-flex items-center gap-3 text-ivory/85 hover:text-[#F2C99E] transition-colors"
-              >
-                <span className="eyebrow text-[0.6rem] tracking-[0.35em]">
-                  Step inside
-                </span>
-                <span className="w-8 h-px bg-[#E0AE6D] group-hover:bg-[#F2C99E] transition-colors" />
-                <span className="text-base leading-none translate-y-[-1px]">→</span>
-              </a>
             </div>
           </div>
         </div>

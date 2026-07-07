@@ -20,8 +20,8 @@ const promises = [
         <path d="m9 12 2 2 4-4" />
       </svg>
     ),
-    title: 'Silk Mark Certified',
-    body: '100% pure mulberry silk',
+    title: 'Insured Worldwide Delivery',
+    body: 'Every parcel tracked and signed for',
   },
   {
     icon: (

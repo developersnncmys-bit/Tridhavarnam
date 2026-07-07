@@ -221,7 +221,7 @@ export default function Hero() {
 
                 {/* Trust micro-row */}
                 <div className="flex flex-wrap items-center gap-x-4 sm:gap-x-5 gap-y-1.5 text-[0.7rem] sm:text-xs text-ivory/65 font-medium">
-                  <span>✓ Silk Mark Certified</span>
+                  <span>✓ Hand-Woven Heirloom</span>
                   <span>✓ Free Shipping Across India</span>
                 </div>
               </div>

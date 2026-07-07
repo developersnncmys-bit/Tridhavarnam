@@ -14,7 +14,7 @@ const BLOCKS: Block[] = [
   {
     href: '/shop?weave=Kanjivaram',
     title: 'Kanjeevaram Sarees',
-    subtitle: 'Pure silk · Korvai borders',
+    subtitle: 'Silk body · Korvai borders',
     image: '/product/Explore-Kanjeevaram.webp',
   },
   {
@@ -26,7 +26,7 @@ const BLOCKS: Block[] = [
   {
     href: '/shop?weave=Mysore+Silk',
     title: 'Mysore Silk Sarees',
-    subtitle: 'KSIC-certified pure silk',
+    subtitle: 'Crepe-soft Mysuru silk',
     image: '/product/Explore-Mysoresilk.webp',
   },
   {
