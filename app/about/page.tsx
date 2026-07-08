@@ -12,21 +12,20 @@ export const metadata: Metadata = {
     'Thridha Varnam is a premium saree brand inspired by the beauty, grace, and cultural richness of Indian womanhood. Tradition in Every Color.',
 };
 
-// Placeholder founder copy — swap with the real bios + headshots when
-// the client sends them. Keep the shape the same and the founders map
-// (rendered below Vision & Mission) will pick up the new values.
+// Founder + Co-Founder profiles. Drop headshot images into /public and
+// wire them up here when the shots land.
 const founders: { name: string; role: string; initials: string; bio: string }[] = [
   {
-    name: 'Founder Name',
-    role: 'Founder & Creative Director',
-    initials: 'FN',
-    bio: "A lifelong student of India's handloom traditions, the founder set up Thridha Varnam to bring the craft of master weaver families to a new generation. She personally curates every collection and works alongside artisans in Kanchipuram, Varanasi and Mysuru to ensure each drape stays faithful to its lineage.",
+    name: 'A. Juhith Sai',
+    role: 'Founder',
+    initials: 'JS',
+    bio: 'A. Juhith Sai is the Founder of Thridha Varnam and a Fashion Designing graduate from JD Institute of Fashion Technology, Bengaluru (2019). With a strong passion for Indian textiles and timeless fashion, she transformed her creative vision into a premium handloom brand. Alongside her successful digital journey as the creator of Juhith Vlogs, with over 850,000 subscribers, she continues to inspire modern women by blending tradition with contemporary elegance.',
   },
   {
-    name: 'Co-Founder Name',
-    role: 'Co-Founder & Head of Operations',
-    initials: 'CN',
-    bio: "The co-founder leads sourcing, quality and the atelier's end-to-end operations. A textile engineer by training, he built the house's five-step inspection process and the direct-to-weaver royalty model that shares proceeds with the families whose work carries the brand.",
+    name: 'Darshan Gowda C. L.',
+    role: 'Co-Founder',
+    initials: 'DG',
+    bio: "Darshan Gowda C. L. is the Co-Founder of Thridha Varnam. Coming from a fashion background and actively involved in fashion shows and runway events, he shares a deep appreciation for Indian craftsmanship and design. Together with Juhith Sai, he co-founded Thridha Varnam with a vision to preserve India's rich weaving heritage while delivering authentic, premium handloom sarees to customers around the world. He oversees the brand's operations, sourcing, and business development.",
   },
 ];
 
@@ -195,7 +194,7 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-8 text-[0.7rem] text-ink/50 italic">
-            Placeholder biographies — final copy and headshots to follow.
+            Founder headshots to follow.
           </p>
         </div>
       </section>
